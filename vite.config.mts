@@ -17,6 +17,8 @@ const ENV_PREFIX = "ENV_";
 //   passphrase: "123456",
 // };
 
+const ReactCompilerConfig = {};
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), ENV_PREFIX);
@@ -25,7 +27,13 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [
-      react(),
+      // react(),
+      react({
+        babel: {
+          // @see https://react.dev/learn/react-compiler#usage-with-vite
+          plugins: [["babel-plugin-react-compiler", ReactCompilerConfig]],
+        },
+      }),
       tsconfigPaths(),
       svgr({
         include: "**/*.svg",

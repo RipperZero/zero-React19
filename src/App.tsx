@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 
 // import ViteLogo from "/vite.svg";
 import "./App.css";
 import ReactLogo from "./assets/react.svg";
+
+const TestCompiler: FC = () => {
+  console.log("TestCompiler render");
+
+  return <div>TestCompiler</div>;
+};
 
 function App() {
   const [count, setCount] = useState(0);
@@ -31,6 +37,8 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+
+      <TestCompiler />
     </>
   );
 }
