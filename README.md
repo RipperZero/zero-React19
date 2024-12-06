@@ -1,1 +1,1 @@
-# zero-React19
+# React19 + TypeScript + Vite + Tailwind
