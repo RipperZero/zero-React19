@@ -5,7 +5,7 @@ import { createRoot, Root } from "react-dom/client";
 // @see https://github.com/joppuyo/large-small-dynamic-viewport-units-polyfill
 import "large-small-dynamic-viewport-units-polyfill";
 
-import App from "./App";
+import { App } from "./App";
 import "./main.css";
 
 let root: Root | undefined = undefined;
