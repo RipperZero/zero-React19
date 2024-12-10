@@ -30,7 +30,10 @@ export default tseslint.config(
       ],
       "react-compiler/react-compiler": "error",
       "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "warn",
       // "react/jsx-pascal-case": ["warn", { allowLeadingUnderscore: true }],
+
+      "no-extra-boolean-cast": "off",
     },
   },
 );
