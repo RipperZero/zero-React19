@@ -19,6 +19,7 @@
     "dayjs": "^1.11.13",
     "immer": "^10.1.1",
     "large-small-dynamic-viewport-units-polyfill": "^0.1.1",
+    "prism-react-renderer": "^2.4.0",
     "qs": "^6.13.1",
     "radash": "^12.1.0",
     "react": "^19.0.0",

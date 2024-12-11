@@ -1,8 +1,7 @@
 import { FC, useRef, useState } from "react";
 
-// import ViteLogo from "/vite.svg";
 import "./App.css";
-import ReactLogo from "./assets/react.svg";
+import { AppCode } from "./AppCode";
 
 const getRandomColor = () => {
   console.log("====>>>> run getRandomColor");
@@ -27,7 +26,7 @@ const TestCompilerA: FC<{
   printCountB();
 
   return (
-    <div className="flex flex-col gap-2 border-2 border-solid border-indigo-600 p-2">
+    <div className="flex w-1/2 flex-col gap-2 border-2 border-solid border-indigo-600 p-2">
       <div>TestCompilerA → run printCountB(props) every render</div>
 
       <div className="flex gap-4">
@@ -50,7 +49,7 @@ const TestCompilerB: FC<{
   printCountA();
 
   return (
-    <div className="flex flex-col gap-2 border-2 border-solid border-indigo-600 p-2">
+    <div className="flex w-1/2 flex-col gap-2 border-2 border-solid border-indigo-600 p-2">
       <div>TestCompilerB → run printCountA(props) every render</div>
 
       <div className="flex gap-4">
@@ -75,7 +74,7 @@ const TestCompilerAandB: FC<{
   printCountB();
 
   return (
-    <div className="flex flex-col gap-2 border-2 border-solid border-indigo-600 p-2">
+    <div className="flex w-1/2 flex-col gap-2 border-2 border-solid border-indigo-600 p-2">
       <div>
         TestCompilerAandB → run printCountA&printCountB(props) every render
       </div>
@@ -107,19 +106,6 @@ const App: FC = () => {
 
   return (
     <div className="m-6 flex flex-col gap-6">
-      <div>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={"/vite.svg"} className="logo react" alt="React logo" />
-          {/* <ViteLogo className="logo react" /> */}
-        </a>
-        <a href="https://vite.dev" target="_blank" rel="noreferrer">
-          {/* <img src={viteLogo} className="logo" alt="Vite logo" /> */}
-          <ReactLogo className="logo" />
-        </a>
-      </div>
-
-      <h1>Vite + React</h1>
-
       <div className="card flex flex-col gap-2">
         <button
           className="w-[200px]"
@@ -160,6 +146,8 @@ const App: FC = () => {
           printCountB={printCountB}
         />
       </div>
+
+      <AppCode />
     </div>
   );
 };
